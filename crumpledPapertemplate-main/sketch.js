@@ -7,7 +7,8 @@ const Render = Matter.Render;
 var dustbinObj,groundObject	
 var world;
 var r;
-
+var paper, psprite;
+var t = 0
 
 function setup() {
 	createCanvas(1600, 700);
@@ -22,18 +23,23 @@ function setup() {
 
 	Engine.run(engine);
 	paper=loadImage('paper.png')
-  
+    psprite = createSprite(1200,500);psprite.addImage(paper);psprite.visible = false
 }
 
 
 function draw() {
   rectMode(CENTER);
   background(230);
-    image(paper,1100,500)
 
+
+ 
+
+  
 
   groundObject.display();
   dustbinObj.display();
   drawSprites()
 }
+                                     
+
                                      
